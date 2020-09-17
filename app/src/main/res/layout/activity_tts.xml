@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".TtsActivity">
+
+    <com.leon.myviewapp.ui.ClearEditText
+        android:id="@+id/et"
+        android:text="Le brouillard était tombé tôt, je travaillais au jardin. Des colibris s'arrêtaient au-dessus de la fleur du chèvrefeuille. Il n'y avait rien sur terre que j'aurais voulu posséder. Je ne connaissais personne qui aurait valu d'être envié. Le mal qui était advenu, je l'oubliais. Je n'avais pas honte d'être celui que je suis.Je ne sentais dans mon corps nulle douleur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_below="@+id/et"
+        android:id="@+id/play"
+        android:layout_width="match_parent"
+        android:text="朗读"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/show"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/chushihua"
+        android:text="初始化+"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/yindiaojia"
+        android:text="音调+"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/yindiaojian"
+        android:text="音调-"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/yusujia"
+        android:text="语速+"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/yusujian"
+        android:text="语速-"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

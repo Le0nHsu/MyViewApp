@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyToggleView">
+        <attr name="choosed_color" format="color"/>
+        <attr name="unchoosed_color" format="color"/>
+        <attr name="state" format="boolean"/>
+        <attr name="state_background" format="color"/>
+    </declare-styleable>
+</resources>
