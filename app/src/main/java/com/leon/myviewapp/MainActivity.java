@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import com.leon.myviewapp.ui.MyToggleView;
 
@@ -18,6 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.tts).setOnClickListener(this);
+//        ActivityThread
 
 //        myToggleView = findViewById(R.id.myToggleView);
 //        myToggleView.setChoosedColor(getResources().getColor(R.color.cciblue));

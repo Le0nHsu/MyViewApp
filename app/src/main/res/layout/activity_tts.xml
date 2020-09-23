@@ -9,7 +9,7 @@
 
     <com.leon.myviewapp.ui.ClearEditText
         android:id="@+id/et"
-        android:text="Le brouillard était tombé tôt, je travaillais au jardin. Des colibris s'arrêtaient au-dessus de la fleur du chèvrefeuille. Il n'y avait rien sur terre que j'aurais voulu posséder. Je ne connaissais personne qui aurait valu d'être envié. Le mal qui était advenu, je l'oubliais. Je n'avais pas honte d'être celui que je suis.Je ne sentais dans mon corps nulle douleur"
+        android:text="铁板牛柳"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView

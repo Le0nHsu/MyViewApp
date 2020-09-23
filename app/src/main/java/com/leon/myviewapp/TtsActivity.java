@@ -33,11 +33,11 @@ public class TtsActivity extends Activity implements View.OnClickListener, TextT
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tts);
-        if(isGoogleTTSInstalled()){
-            openTTSSettingsToInstallUnsupportedLanguage();
-        }else{
-            installGoogleTTS();
-        }
+//        if(isGoogleTTSInstalled()){
+//            openTTSSettingsToInstallUnsupportedLanguage();
+//        }else{
+//            installGoogleTTS();
+//        }
         initViews();
     }
 
@@ -51,7 +51,7 @@ public class TtsActivity extends Activity implements View.OnClickListener, TextT
         findViewById(R.id.yusujia).setOnClickListener(this);
         findViewById(R.id.yusujian).setOnClickListener(this);
         if (textToSpeech == null) {
-            textToSpeech = new TextToSpeech(this, this,"pico");
+            textToSpeech = new TextToSpeech(this, this);
             textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                 @Override
                 public void onStart(String utteranceId) {
@@ -69,7 +69,16 @@ public class TtsActivity extends Activity implements View.OnClickListener, TextT
                 }
             });
         }
+        getEngines();
         updateShow();
+    }
+
+    private void getEngines() {
+        ArrayList<TextToSpeech.EngineInfo> list = new ArrayList<>();
+        list.addAll(textToSpeech.getEngines());
+        for(TextToSpeech.EngineInfo info:list){
+            Log.d(TAG,"name: " + info.name + "\nlabel: " + info.label  + "\nicon: " + info.icon);
+        }
     }
 
     private ClearEditText getEt(){
@@ -106,8 +115,6 @@ public class TtsActivity extends Activity implements View.OnClickListener, TextT
     }
 
     private void updateParams() {
-        ArrayList<TextToSpeech.EngineInfo> list = new ArrayList<>();
-        list.addAll(textToSpeech.getEngines());
         ttsParam();
         updateShow();
     }
@@ -130,10 +137,10 @@ public class TtsActivity extends Activity implements View.OnClickListener, TextT
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS) {
             //初始化tts引擎
-            int result = textToSpeech.setLanguage(Locale.FRANCE);
+            int result = textToSpeech.setLanguage(Locale.CHINA);
             //设置参数
             ttsParam();
-            judgeIfSupported(result);
+//            judgeIfSupported(result);
         } else if (status == TextToSpeech.ERROR) {
             Toast.makeText(this, "ERROR", Toast.LENGTH_SHORT).show();
         }
