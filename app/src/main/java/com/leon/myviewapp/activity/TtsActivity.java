@@ -1,4 +1,4 @@
-package com.leon.myviewapp;
+package com.leon.myviewapp.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.leon.myviewapp.R;
 import com.leon.myviewapp.ui.ClearEditText;
 
 import java.util.ArrayList;
